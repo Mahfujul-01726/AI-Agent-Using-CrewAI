@@ -1,0 +1,33 @@
+package com.example.helpconnect.ui.components
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import com.example.helpconnect.ui.theme.DarkBackground
+import com.example.helpconnect.ui.theme.PrimaryPurple
+
+@Composable
+fun ScreenBackground(
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit
+) {
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        PrimaryPurple.copy(alpha = 0.3f), // Top tint
+                        DarkBackground,
+                        DarkBackground
+                    )
+                )
+            )
+    ) {
+        content()
+    }
+}
