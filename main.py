@@ -26,7 +26,7 @@ if not OPENAI_API_KEY or OPENAI_API_KEY == "your_openai_api_key_here":
     print("Get your API key from: https://platform.openai.com/api-keys")
     sys.exit(1)
 
-os.environ["SERPER_API_KEY"] = SERPER_API_KEY  # Your serper.dev API key
+os.environ["SERPER_API_KEY"] = SERPER_API_KEY
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 os.environ["OPENAI_MODEL_NAME"] = "gpt-3.5-turbo"
 
